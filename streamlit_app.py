@@ -2,13 +2,13 @@ import streamlit as st
 import requests
 import pandas as pd
 import numpy as np
-import pydeck as pdk
 from pathlib import Path
 from datetime import date
+import pydeck as pdk
 
 
 # ============================================================
-# CONFIG
+# CONFIGURATION
 # ============================================================
 
 API_URL = "https://agrisense-fyvu.onrender.com"
@@ -30,6 +30,10 @@ MASTER_FILE = (
 )
 
 
+# ============================================================
+# STREAMLIT CONFIG
+# ============================================================
+
 st.set_page_config(
     page_title="AgriSense AI",
     page_icon="🌾",
@@ -39,113 +43,10 @@ st.set_page_config(
 
 
 # ============================================================
-# CUSTOM CSS
-# ============================================================
-
-st.markdown(
-    """
-    <style>
-
-    .main {
-        background-color: #f7f9f6;
-    }
-
-    .hero {
-        padding: 1.5rem 2rem;
-        border-radius: 18px;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(
-            135deg,
-            #12372a 0%,
-            #1f5c42 55%,
-            #2e7d5b 100%
-        );
-        color: white;
-    }
-
-    .hero h1 {
-        font-size: 2.8rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .hero p {
-        font-size: 1.15rem;
-        opacity: 0.92;
-    }
-
-    .metric-card {
-        background: white;
-        padding: 1.2rem;
-        border-radius: 15px;
-        border: 1px solid #e4e9e4;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        text-align: center;
-    }
-
-    .metric-title {
-        font-size: 0.9rem;
-        color: #667066;
-    }
-
-    .metric-value {
-        font-size: 1.8rem;
-        font-weight: 700;
-        margin-top: 0.3rem;
-    }
-
-    .risk-card {
-        background: white;
-        padding: 1.2rem;
-        border-radius: 15px;
-        border: 1px solid #e4e9e4;
-        text-align: center;
-        min-height: 120px;
-    }
-
-    .risk-title {
-        font-size: 0.9rem;
-        color: #667066;
-    }
-
-    .risk-value {
-        font-size: 1.4rem;
-        font-weight: 700;
-        margin-top: 0.5rem;
-    }
-
-    .recommendation {
-        background: white;
-        padding: 1rem 1.2rem;
-        border-left: 5px solid #2e7d5b;
-        border-radius: 8px;
-        margin-bottom: 0.7rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-top: 1rem;
-        margin-bottom: 0.8rem;
-    }
-
-    .small-note {
-        color: #6b746b;
-        font-size: 0.85rem;
-    }
-
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
-# ============================================================
-# HELPERS
+# API FUNCTIONS
 # ============================================================
 
 def api_get(endpoint):
-    """GET request to the AgriSense API."""
-
     response = requests.get(
         f"{API_URL}{endpoint}",
         timeout=30
@@ -157,12 +58,10 @@ def api_get(endpoint):
 
 
 def api_post(endpoint, payload):
-    """POST request to the AgriSense API."""
-
     response = requests.post(
         f"{API_URL}{endpoint}",
         json=payload,
-        timeout=90
+        timeout=120
     )
 
     response.raise_for_status()
@@ -170,12 +69,13 @@ def api_post(endpoint, payload):
     return response.json()
 
 
-def extract_list(data, possible_keys):
+# ============================================================
+# DATA HELPERS
+# ============================================================
+
+def extract_list(data, keys):
     """
-    Handle APIs that return either:
-        ["A", "B"]
-    or:
-        {"crops": ["A", "B"]}
+    Safely extract a list from different possible API formats.
     """
 
     if isinstance(data, list):
@@ -183,20 +83,47 @@ def extract_list(data, possible_keys):
 
     if isinstance(data, dict):
 
-        for key in possible_keys:
+        for key in keys:
 
-            if key in data and isinstance(data[key], list):
-                return data[key]
+            value = data.get(key)
+
+            if isinstance(value, list):
+                return value
 
     return []
 
 
-def risk_icon(level):
+def clean_list(values):
+    """
+    Convert API values into clean strings.
+    """
 
-    if not level:
+    if not values:
+        return []
+
+    cleaned = []
+
+    for value in values:
+
+        if value is None:
+            continue
+
+        text = str(value).strip()
+
+        if text:
+            cleaned.append(text)
+
+    return sorted(
+        list(set(cleaned))
+    )
+
+
+def get_risk_icon(level):
+
+    if level is None:
         return "⚪"
 
-    level = str(level).lower()
+    level = str(level).strip().lower()
 
     if level == "low":
         return "🟢"
@@ -204,7 +131,7 @@ def risk_icon(level):
     if level == "moderate":
         return "🟡"
 
-    if level in ["elevated", "medium"]:
+    if level == "elevated":
         return "🟠"
 
     if level == "high":
@@ -213,18 +140,26 @@ def risk_icon(level):
     return "⚪"
 
 
-def risk_description(level):
+def get_risk_description(level):
 
-    if not level:
-        return "No risk information available."
+    if level is None:
+        return "Risk information is unavailable."
 
-    level = str(level).lower()
+    level = str(level).strip().lower()
 
     descriptions = {
-        "low": "Conditions are relatively favorable.",
-        "moderate": "Some conditions require monitoring.",
-        "elevated": "Several conditions require attention.",
-        "high": "Conditions indicate substantial agricultural risk."
+
+        "low":
+            "Conditions are relatively favorable.",
+
+        "moderate":
+            "Some conditions require monitoring.",
+
+        "elevated":
+            "Several conditions require attention.",
+
+        "high":
+            "Conditions indicate elevated agricultural risk."
     }
 
     return descriptions.get(
@@ -233,34 +168,89 @@ def risk_description(level):
     )
 
 
+def clean_recommendations(value):
+    """
+    Make recommendations display safely regardless
+    of the API response format.
+    """
+
+    if value is None:
+        return []
+
+    if isinstance(value, str):
+
+        text = value.strip()
+
+        return [text] if text else []
+
+    if isinstance(value, (list, tuple)):
+
+        output = []
+
+        for item in value:
+
+            if item is None:
+                continue
+
+            text = str(item).strip()
+
+            if text:
+                output.append(text)
+
+        return output
+
+    return [str(value)]
+
+
 # ============================================================
-# LOAD API DATA
+# API DATA
 # ============================================================
 
 @st.cache_data(ttl=3600)
 def load_crops():
 
-    data = api_get("/crops")
+    try:
 
-    return extract_list(
-        data,
-        ["crops", "data", "items"]
-    )
+        data = api_get("/crops")
+
+        return clean_list(
+            extract_list(
+                data,
+                ["crops", "data", "items"]
+            )
+        )
+
+    except Exception:
+
+        return []
 
 
 @st.cache_data(ttl=3600)
 def load_locations():
 
-    data = api_get("/locations")
+    try:
 
-    return extract_list(
-        data,
-        ["locations", "districts", "data", "items"]
-    )
+        data = api_get("/locations")
+
+        return clean_list(
+            extract_list(
+                data,
+                [
+                    "locations",
+                    "districts",
+                    "data",
+                    "items"
+                ]
+            )
+        )
+
+    except Exception:
+
+        return []
 
 
 # ============================================================
-# LOAD MAP DATA
+# MAP DATA
 # ============================================================
 
 @st.cache_data
@@ -285,10 +275,12 @@ def load_map_data():
     )
 
     locations = locations.dropna(
-        subset=["latitude", "longitude"]
+        subset=[
+            "latitude",
+            "longitude"
+        ]
     )
 
-    # One coordinate per province/district
     locations = (
         locations
         .sort_values(
@@ -308,12 +300,16 @@ def load_map_data():
         }
     )
 
+    # --------------------------------------------------------
     # Historical yield
+    # --------------------------------------------------------
+
     if MASTER_FILE.exists():
 
         master = pd.read_csv(
             MASTER_FILE,
             usecols=[
+                "crop",
                 "province",
                 "district",
                 "yield_tonnes_per_ha"
@@ -323,10 +319,14 @@ def load_map_data():
         historical = (
             master
             .groupby(
-                ["province", "district"],
+                [
+                    "province",
+                    "district"
+                ],
                 as_index=False
-            )
-            ["yield_tonnes_per_ha"]
+            )[
+                "yield_tonnes_per_ha"
+            ]
             .mean()
             .rename(
                 columns={
@@ -338,7 +338,10 @@ def load_map_data():
 
         locations = locations.merge(
             historical,
-            on=["province", "district"],
+            on=[
+                "province",
+                "district"
+            ],
             how="left"
         )
 
@@ -350,23 +353,19 @@ def load_map_data():
 
 
 # ============================================================
-# PAGE HEADER
+# HEADER
 # ============================================================
 
-st.markdown(
-    """
-    <div class="hero">
+st.title("🌾 AgriSense AI")
 
-        <h1>🌾 AgriSense AI</h1>
+st.subheader(
+    "Intelligent Agricultural Risk, Yield Prediction "
+    "& Decision Support System for Zambian Farmers"
+)
 
-        <p>
-        Intelligent Agricultural Risk, Yield Prediction
-        & Decision Support System for Zambian Farmers
-        </p>
-
-    </div>
-    """,
-    unsafe_allow_html=True
+st.caption(
+    "Agricultural intelligence powered by rainfall, "
+    "soil, satellite vegetation indicators and machine learning."
 )
 
 
@@ -376,25 +375,16 @@ st.markdown(
 
 try:
 
-    health = api_get("/health")
-
-    api_online = True
-
-except Exception:
-
-    api_online = False
-
-
-if api_online:
+    api_get("/health")
 
     st.success(
         "🟢 AgriSense AI decision engine is online."
     )
 
-else:
+except Exception:
 
     st.error(
-        "🔴 AgriSense API is currently unavailable."
+        "🔴 AgriSense AI decision engine is currently unavailable."
     )
 
 
@@ -402,60 +392,32 @@ else:
 # SIDEBAR
 # ============================================================
 
-st.sidebar.title("🌾 AgriSense AI")
+st.sidebar.title("🌾 Farm Assessment")
 
-st.sidebar.markdown(
-    """
-    ### Farm Assessment
-
-    Enter four simple pieces of information.
-
-    AgriSense combines them with agricultural
-    environmental information to generate
-    a yield and risk assessment.
-    """
+st.sidebar.write(
+    "Enter four simple pieces of information "
+    "to assess a farm."
 )
 
-try:
 
-    crops = load_crops()
+# ============================================================
+# LOAD INPUT OPTIONS
+# ============================================================
 
-except Exception as e:
+crops = load_crops()
 
-    crops = []
-
-    st.sidebar.error(
-        f"Could not load crops: {e}"
-    )
-
-
-try:
-
-    locations = load_locations()
-
-except Exception as e:
-
-    locations = []
-
-    st.sidebar.error(
-        f"Could not load locations: {e}"
-    )
+locations = load_locations()
 
 
 # ============================================================
 # FARM INPUTS
 # ============================================================
 
-st.sidebar.markdown("---")
-
-st.sidebar.subheader("🌱 Farm Information")
-
-
 if crops:
 
     crop = st.sidebar.selectbox(
         "Crop",
-        sorted(crops)
+        crops
     )
 
 else:
@@ -479,7 +441,7 @@ if locations:
 
     location = st.sidebar.selectbox(
         "District",
-        sorted(locations)
+        locations
     )
 
 else:
@@ -496,6 +458,9 @@ planting_date = st.sidebar.date_input(
 )
 
 
+st.sidebar.markdown("---")
+
+
 analyze = st.sidebar.button(
     "🚀 ANALYZE MY FARM",
     use_container_width=True
@@ -503,28 +468,49 @@ analyze = st.sidebar.button(
 
 
 # ============================================================
-# MAIN INTRO
+# INITIAL SCREEN
 # ============================================================
 
-if not analyze and "prediction" not in st.session_state:
+if (
+    not analyze
+    and "prediction" not in st.session_state
+):
 
-    st.markdown(
-        """
-        ## 🌱 Agricultural Decision Support
+    st.header("🌱 Agricultural Decision Support")
 
-        AgriSense AI combines:
+    st.write(
+        "AgriSense AI combines agricultural data, "
+        "environmental indicators and machine learning "
+        "to provide a farm-level assessment."
+    )
 
-        - 🌧️ rainfall information
-        - 🌱 soil characteristics
-        - 🛰️ vegetation indicators
-        - 🌾 crop information
-        - 📍 geographic information
-        - 📊 historical agricultural data
+    col1, col2, col3 = st.columns(3)
 
-        to produce a farm-level yield and risk assessment.
+    with col1:
 
-        **Enter your farm information in the sidebar to begin.**
-        """
+        st.info(
+            "🌧️ **Rainfall**\n\n"
+            "Historical rainfall indicators."
+        )
+
+    with col2:
+
+        st.info(
+            "🌱 **Soil**\n\n"
+            "Soil characteristics from SoilGrids."
+        )
+
+    with col3:
+
+        st.info(
+            "🛰️ **Vegetation**\n\n"
+            "Satellite-derived NDVI indicators."
+        )
+
+    st.write("")
+
+    st.write(
+        "Use the controls on the left to run a farm assessment."
     )
 
 
@@ -536,19 +522,21 @@ if analyze:
 
     payload = {
 
-        "crop": crop,
+        "crop":
+            crop,
 
-        "farm_size_ha": float(
-            farm_size
-        ),
+        "farm_size_ha":
+            float(farm_size),
 
-        "location": location,
+        "location":
+            location,
 
-        "planting_date": planting_date.isoformat()
+        "planting_date":
+            planting_date.isoformat()
     }
 
     with st.spinner(
-        "🌍 Analyzing agricultural conditions..."
+        "🌍 Analyzing farm conditions..."
     ):
 
         try:
@@ -560,187 +548,148 @@ if analyze:
 
             st.session_state.prediction = result
 
-        except requests.exceptions.HTTPError as e:
+        except requests.exceptions.HTTPError as error:
 
             st.error(
-                f"API returned an error: {e}"
+                "The prediction API returned an error."
             )
 
-            try:
+            if error.response is not None:
 
                 st.code(
-                    e.response.text
+                    error.response.text
                 )
 
-            except Exception:
-                pass
-
-        except Exception as e:
+        except Exception as error:
 
             st.error(
-                f"Prediction failed: {e}"
+                "Could not connect to the prediction service."
             )
+
+            st.exception(error)
 
 
 # ============================================================
-# DISPLAY RESULT
+# DISPLAY PREDICTION
 # ============================================================
 
 if "prediction" in st.session_state:
 
     result = st.session_state.prediction
 
-    st.markdown(
-        '<div class="section-title">🎯 Farm Prediction</div>',
-        unsafe_allow_html=True
+
+    # ========================================================
+    # MAIN PREDICTION
+    # ========================================================
+
+    st.header("🎯 Farm Prediction")
+
+
+    predicted_yield = float(
+        result.get(
+            "predicted_yield_tonnes_per_ha",
+            0
+        )
     )
 
-    # --------------------------------------------------------
-    # MAIN METRICS
-    # --------------------------------------------------------
 
-    col1, col2, col3, col4 = st.columns(4)
-
-    predicted_yield = result.get(
-        "predicted_yield_tonnes_per_ha",
-        0
+    total_yield = float(
+        result.get(
+            "estimated_total_yield_tonnes",
+            predicted_yield * float(farm_size)
+        )
     )
 
-    total_yield = result.get(
-        "estimated_total_yield_tonnes",
-        0
+
+    result_crop = result.get(
+        "crop",
+        crop
     )
+
+
+    result_location = result.get(
+        "location",
+        location
+    )
+
 
     overall_risk = result.get(
         "risk_level",
         "Unknown"
     )
 
-    crop_result = result.get(
-        "crop",
-        crop
-    )
 
-    location_result = result.get(
-        "location",
-        location
-    )
+    col1, col2, col3, col4 = st.columns(4)
+
 
     with col1:
 
-        st.markdown(
-            f"""
-            <div class="metric-card">
-
-                <div class="metric-title">
-                    Predicted Yield
-                </div>
-
-                <div class="metric-value">
-                    {predicted_yield:.3f}
-                    t/ha
-                </div>
-
-            </div>
-            """,
-            unsafe_allow_html=True
+        st.metric(
+            "Predicted Yield",
+            f"{predicted_yield:.3f} t/ha"
         )
+
 
     with col2:
 
-        st.markdown(
-            f"""
-            <div class="metric-card">
-
-                <div class="metric-title">
-                    Estimated Production
-                </div>
-
-                <div class="metric-value">
-                    {total_yield:.3f}
-                    tonnes
-                </div>
-
-            </div>
-            """,
-            unsafe_allow_html=True
+        st.metric(
+            "Estimated Production",
+            f"{total_yield:.3f} tonnes"
         )
+
 
     with col3:
 
-        st.markdown(
-            f"""
-            <div class="metric-card">
-
-                <div class="metric-title">
-                    Crop
-                </div>
-
-                <div class="metric-value">
-                    {crop_result}
-                </div>
-
-            </div>
-            """,
-            unsafe_allow_html=True
+        st.metric(
+            "Crop",
+            result_crop
         )
+
 
     with col4:
 
-        st.markdown(
-            f"""
-            <div class="metric-card">
-
-                <div class="metric-title">
-                    Location
-                </div>
-
-                <div class="metric-value">
-                    {location_result}
-                </div>
-
-            </div>
-            """,
-            unsafe_allow_html=True
+        st.metric(
+            "Location",
+            result_location
         )
 
 
-    # --------------------------------------------------------
+    # ========================================================
     # OVERALL RISK
-    # --------------------------------------------------------
+    # ========================================================
 
-    st.markdown("---")
+    st.divider()
 
-    st.subheader(
-        f"{risk_icon(overall_risk)} Overall Agricultural Risk: "
-        f"{overall_risk}"
+    st.header(
+        f"{get_risk_icon(overall_risk)} "
+        f"Overall Agricultural Risk: {overall_risk}"
     )
 
     st.info(
-        risk_description(overall_risk)
+        get_risk_description(
+            overall_risk
+        )
     )
 
 
-    # --------------------------------------------------------
+    # ========================================================
     # RISK BREAKDOWN
-    # --------------------------------------------------------
+    # ========================================================
 
-    st.markdown(
-        '<div class="section-title">🌍 Risk Breakdown</div>',
-        unsafe_allow_html=True
-    )
+    st.header("🌍 Risk Breakdown")
 
-    risk1, risk2, risk3 = st.columns(3)
 
     rainfall_risk = result.get(
         "rainfall_risk",
         "Unknown"
     )
 
+
     soil_risk = result.get(
         "soil_risk",
         "Unknown"
     )
+
 
     vegetation_risk = result.get(
         "vegetation_risk",
@@ -748,98 +697,123 @@ if "prediction" in st.session_state:
     )
 
 
+    risk1, risk2, risk3 = st.columns(3)
+
+
     with risk1:
 
-        st.markdown(
-            f"""
-            <div class="risk-card">
+        st.subheader("🌧️ Rainfall")
 
-                <div class="risk-title">
-                    🌧️ Rainfall
-                </div>
+        st.metric(
+            "Risk",
+            f"{get_risk_icon(rainfall_risk)} "
+            f"{rainfall_risk}"
+        )
 
-                <div class="risk-value">
-                    {risk_icon(rainfall_risk)}
-                    {rainfall_risk}
-                </div>
-
-            </div>
-            """,
-            unsafe_allow_html=True
+        st.caption(
+            get_risk_description(
+                rainfall_risk
+            )
         )
 
 
     with risk2:
 
-        st.markdown(
-            f"""
-            <div class="risk-card">
+        st.subheader("🌱 Soil")
 
-                <div class="risk-title">
-                    🌱 Soil
-                </div>
+        st.metric(
+            "Risk",
+            f"{get_risk_icon(soil_risk)} "
+            f"{soil_risk}"
+        )
 
-                <div class="risk-value">
-                    {risk_icon(soil_risk)}
-                    {soil_risk}
-                </div>
-
-            </div>
-            """,
-            unsafe_allow_html=True
+        st.caption(
+            get_risk_description(
+                soil_risk
+            )
         )
 
 
     with risk3:
 
-        st.markdown(
-            f"""
-            <div class="risk-card">
+        st.subheader("🛰️ Vegetation")
 
-                <div class="risk-title">
-                    🛰️ Vegetation
-                </div>
+        st.metric(
+            "Risk",
+            f"{get_risk_icon(vegetation_risk)} "
+            f"{vegetation_risk}"
+        )
 
-                <div class="risk-value">
-                    {risk_icon(vegetation_risk)}
-                    {vegetation_risk}
-                </div>
-
-            </div>
-            """,
-            unsafe_allow_html=True
+        st.caption(
+            get_risk_description(
+                vegetation_risk
+            )
         )
 
 
-    # --------------------------------------------------------
-    # ENVIRONMENTAL CONDITIONS
-    # --------------------------------------------------------
+    # ========================================================
+    # ENVIRONMENTAL FEATURES
+    # ========================================================
+
+    st.header(
+        "🔬 Environmental Conditions"
+    )
+
 
     environmental = result.get(
         "environmental_features",
         {}
     )
 
-    st.markdown(
-        '<div class="section-title">🔬 Environmental Conditions</div>',
-        unsafe_allow_html=True
-    )
 
-    if environmental:
+    if isinstance(
+        environmental,
+        dict
+    ) and environmental:
 
-        env_df = pd.DataFrame(
-            {
-                "Indicator": list(
-                    environmental.keys()
-                ),
-                "Value": list(
-                    environmental.values()
+        rows = []
+
+        for key, value in environmental.items():
+
+            if value is None:
+
+                display_value = "Not available"
+
+            elif isinstance(
+                value,
+                float
+            ):
+
+                display_value = round(
+                    value,
+                    3
                 )
-            }
+
+            else:
+
+                display_value = value
+
+            rows.append(
+                {
+                    "Indicator":
+                        key.replace(
+                            "_",
+                            " "
+                        ).title(),
+
+                    "Value":
+                        display_value
+                }
+            )
+
+
+        environmental_df = pd.DataFrame(
+            rows
         )
 
+
         st.dataframe(
-            env_df,
+            environmental_df,
             use_container_width=True,
             hide_index=True
         )
@@ -847,219 +821,309 @@ if "prediction" in st.session_state:
     else:
 
         st.info(
-            "Environmental information was not returned by the API."
+            "Environmental feature details "
+            "were not returned by the API."
         )
 
 
-    # --------------------------------------------------------
+    # ========================================================
     # DECISION CONTEXT
-    # --------------------------------------------------------
+    # ========================================================
 
-    st.markdown(
-        '<div class="section-title">🧠 Decision Context</div>',
-        unsafe_allow_html=True
+    st.header(
+        "🧠 Decision Context"
     )
+
 
     st.caption(
-        "These observations describe the environmental "
+        "These observations describe environmental "
         "conditions used by the AgriSense decision engine. "
-        "They are not independent causal explanations of "
-        "the machine-learning prediction."
+        "They are not independent causal explanations "
+        "of the machine-learning prediction."
     )
 
-    context_cols = st.columns(3)
 
-    with context_cols[0]:
+    context1, context2, context3 = st.columns(3)
 
-        st.markdown(
-            f"""
-            **🌧️ Rainfall**
 
-            Risk level: **{rainfall_risk}**
+    with context1:
 
-            {risk_description(rainfall_risk)}
-            """
+        st.subheader("🌧️ Rainfall")
+
+        st.write(
+            f"Risk level: "
+            f"**{rainfall_risk}**"
         )
 
-    with context_cols[1]:
-
-        st.markdown(
-            f"""
-            **🌱 Soil**
-
-            Risk level: **{soil_risk}**
-
-            {risk_description(soil_risk)}
-            """
-        )
-
-    with context_cols[2]:
-
-        st.markdown(
-            f"""
-            **🛰️ Vegetation**
-
-            Risk level: **{vegetation_risk}**
-
-            {risk_description(vegetation_risk)}
-            """
+        st.write(
+            get_risk_description(
+                rainfall_risk
+            )
         )
 
 
-    # --------------------------------------------------------
+    with context2:
+
+        st.subheader("🌱 Soil")
+
+        st.write(
+            f"Risk level: "
+            f"**{soil_risk}**"
+        )
+
+        st.write(
+            get_risk_description(
+                soil_risk
+            )
+        )
+
+
+    with context3:
+
+        st.subheader("🛰️ Vegetation")
+
+        st.write(
+            f"Risk level: "
+            f"**{vegetation_risk}**"
+        )
+
+        st.write(
+            get_risk_description(
+                vegetation_risk
+            )
+        )
+
+
+    # ========================================================
     # RECOMMENDATIONS
-    # --------------------------------------------------------
+    # ========================================================
 
-    st.markdown(
-        '<div class="section-title">💡 Recommendations</div>',
-        unsafe_allow_html=True
+    st.header(
+        "💡 Recommendations"
     )
 
-    recommendations = result.get(
-        "recommendations",
-        []
+
+    recommendations = clean_recommendations(
+        result.get(
+            "recommendations",
+            []
+        )
     )
+
 
     if recommendations:
 
         for recommendation in recommendations:
 
-            st.markdown(
-                f"""
-                <div class="recommendation">
-                    ✅ {recommendation}
-                </div>
-                """,
-                unsafe_allow_html=True
+            st.success(
+                f"✅ {recommendation}"
             )
 
     else:
 
-        st.info(
-            "No recommendations were returned."
+        st.warning(
+            "No recommendations were returned "
+            "by the decision engine."
         )
 
 
-    # --------------------------------------------------------
-    # HISTORICAL DISTRICT CONTEXT
-    # --------------------------------------------------------
+    # ========================================================
+    # HISTORICAL CONTEXT
+    # ========================================================
+
+    st.header(
+        "📊 Historical District Context"
+    )
+
 
     map_data = load_map_data()
 
+
+    historical_yield = None
+
+
     if not map_data.empty:
 
-        district_data = map_data[
+        matches = map_data[
             map_data["district"].astype(str).str.lower()
             ==
-            str(location_result).lower()
+            str(result_location).lower()
         ]
 
-        if not district_data.empty:
 
-            historical_yield = district_data[
+        if not matches.empty:
+
+            value = matches[
                 "historical_yield"
             ].iloc[0]
 
-            if pd.notna(historical_yield):
+            if pd.notna(value):
 
-                st.markdown(
-                    '<div class="section-title">'
-                    '📊 Historical District Context'
-                    '</div>',
-                    unsafe_allow_html=True
+                historical_yield = float(
+                    value
                 )
 
-                difference = (
-                    predicted_yield
-                    -
-                    historical_yield
-                )
 
-                h1, h2, h3 = st.columns(3)
+    if historical_yield is not None:
 
-                with h1:
-
-                    st.metric(
-                        "Predicted Yield",
-                        f"{predicted_yield:.3f} t/ha"
-                    )
-
-                with h2:
-
-                    st.metric(
-                        "Historical District Mean",
-                        f"{historical_yield:.3f} t/ha"
-                    )
-
-                with h3:
-
-                    st.metric(
-                        "Difference",
-                        f"{difference:+.3f} t/ha"
-                    )
+        difference = (
+            predicted_yield
+            -
+            historical_yield
+        )
 
 
-    # --------------------------------------------------------
+        h1, h2, h3 = st.columns(3)
+
+
+        with h1:
+
+            st.metric(
+                "Predicted Yield",
+                f"{predicted_yield:.3f} t/ha"
+            )
+
+
+        with h2:
+
+            st.metric(
+                "Historical District Mean",
+                f"{historical_yield:.3f} t/ha"
+            )
+
+
+        with h3:
+
+            st.metric(
+                "Difference",
+                f"{difference:+.3f} t/ha"
+            )
+
+
+        st.caption(
+            "The historical reference is the mean yield "
+            "across available records for this district."
+        )
+
+
+    else:
+
+        st.info(
+            "Historical yield data is not available "
+            "for this district."
+        )
+
+
+    # ========================================================
     # ZAMBIA MAP
-    # --------------------------------------------------------
+    # ========================================================
 
-    st.markdown(
-        '<div class="section-title">🗺️ Zambia Agricultural Map</div>',
-        unsafe_allow_html=True
+    st.header(
+        "🗺️ Zambia Agricultural Map"
     )
+
 
     if not map_data.empty:
 
         map_display = map_data.copy()
 
-        # Color points according to historical yield
-        def yield_color(value):
+
+        # ----------------------------------------------------
+        # Point colors
+        # ----------------------------------------------------
+
+        def get_color(value):
 
             if pd.isna(value):
 
-                return [150, 150, 150, 180]
+                return [
+                    150,
+                    150,
+                    150,
+                    180
+                ]
 
             if value < 0.5:
 
-                return [220, 53, 69, 190]
+                return [
+                    220,
+                    53,
+                    69,
+                    190
+                ]
 
-            elif value < 1.0:
+            if value < 1.0:
 
-                return [255, 193, 7, 190]
+                return [
+                    255,
+                    193,
+                    7,
+                    190
+                ]
 
-            elif value < 1.5:
+            if value < 1.5:
 
-                return [46, 125, 91, 190]
+                return [
+                    46,
+                    125,
+                    91,
+                    190
+                ]
 
-            else:
-
-                return [25, 118, 210, 190]
-
-
-        map_display["color"] = map_display[
-            "historical_yield"
-        ].apply(yield_color)
+            return [
+                25,
+                118,
+                210,
+                190
+            ]
 
 
-        # Highlight selected district
-        map_display["selected"] = (
-            map_display["district"].astype(str).str.lower()
-            ==
-            str(location_result).lower()
+        map_display["color"] = (
+            map_display[
+                "historical_yield"
+            ]
+            .apply(get_color)
         )
+
+
+        # ----------------------------------------------------
+        # Highlight selected district
+        # ----------------------------------------------------
+
+        selected_mask = (
+            map_display[
+                "district"
+            ]
+            .astype(str)
+            .str.lower()
+            ==
+            str(result_location).lower()
+        )
+
 
         map_display.loc[
-            map_display["selected"],
+            selected_mask,
             "color"
         ] = map_display.loc[
-            map_display["selected"],
-            "selected"
+            selected_mask
         ].apply(
-            lambda _: [255, 87, 34, 255]
+            lambda row:
+                [
+                    255,
+                    87,
+                    34,
+                    255
+                ],
+            axis=1
         )
 
 
+        # ----------------------------------------------------
+        # MAP LAYER
+        # ----------------------------------------------------
+
         layer = pdk.Layer(
+
             "ScatterplotLayer",
 
             data=map_display,
@@ -1080,12 +1144,12 @@ if "prediction" in st.session_state:
 
 
         tooltip = {
-            "html": """
-            <b>{district}</b><br/>
-            Province: {province}<br/>
-            Historical mean yield:
-            {historical_yield} t/ha
-            """,
+
+            "html":
+                "<b>{district}</b><br/>"
+                "Province: {province}<br/>"
+                "Historical yield: "
+                "{historical_yield} t/ha",
 
             "style": {
                 "backgroundColor": "white",
@@ -1095,18 +1159,24 @@ if "prediction" in st.session_state:
 
 
         view_state = pdk.ViewState(
+
             latitude=-13.5,
+
             longitude=27.8,
+
             zoom=4.7,
+
             pitch=0
         )
 
 
         deck = pdk.Deck(
+
             layers=[layer],
+
             initial_view_state=view_state,
-            tooltip=tooltip,
-            map_style=None
+
+            tooltip=tooltip
         )
 
 
@@ -1117,95 +1187,145 @@ if "prediction" in st.session_state:
 
 
         st.caption(
-            "Map shows district-level historical mean yield "
-            "from the AgriSense training dataset. "
+            "District points represent historical mean "
+            "yield from the AgriSense training dataset. "
             "The selected district is highlighted."
         )
 
+
     else:
 
-        st.warning(
-            "Map coordinate data is not available."
+        st.info(
+            "Zambia map data is currently unavailable."
         )
 
 
-    # --------------------------------------------------------
-    # DOWNLOAD RESULT
-    # --------------------------------------------------------
+    # ========================================================
+    # FARM SUMMARY
+    # ========================================================
 
-    st.markdown("---")
+    st.header(
+        "📋 Farm Assessment Summary"
+    )
 
-    result_download = pd.DataFrame(
+
+    summary = pd.DataFrame(
         [
             {
-                "crop": crop_result,
-                "location": location_result,
-                "planting_date": result.get(
-                    "planting_date",
-                    planting_date.isoformat()
-                ),
-                "farm_size_ha": farm_size,
-                "predicted_yield_tonnes_per_ha":
-                    predicted_yield,
-                "estimated_total_yield_tonnes":
-                    total_yield,
-                "risk_level":
-                    overall_risk,
-                "rainfall_risk":
-                    rainfall_risk,
-                "soil_risk":
-                    soil_risk,
-                "vegetation_risk":
-                    vegetation_risk
+                "Crop":
+                    result_crop,
+
+                "District":
+                    result_location,
+
+                "Farm size (ha)":
+                    farm_size,
+
+                "Planting date":
+                    planting_date.isoformat(),
+
+                "Predicted yield (t/ha)":
+                    round(
+                        predicted_yield,
+                        3
+                    ),
+
+                "Estimated production (tonnes)":
+                    round(
+                        total_yield,
+                        3
+                    ),
+
+                "Overall risk":
+                    overall_risk
             }
         ]
     )
 
+
+    st.dataframe(
+        summary,
+        use_container_width=True,
+        hide_index=True
+    )
+
+
+    # ========================================================
+    # DOWNLOAD
+    # ========================================================
+
+    csv_data = summary.to_csv(
+        index=False
+    )
+
+
     st.download_button(
         "📥 Download Farm Assessment",
-        data=result_download.to_csv(
-            index=False
-        ),
+        data=csv_data,
         file_name="agrisense_farm_assessment.csv",
         mime="text/csv"
     )
-    
-    
-    
-    
-    
-    st.markdown("---")
 
-st.markdown(
-    """
-    ## 🌾 About AgriSense AI
 
-    AgriSense AI is an agricultural decision-support
-    system designed for Zambia.
+# ============================================================
+# ABOUT
+# ============================================================
 
-    The system combines agricultural survey data,
-    rainfall information, soil characteristics,
-    satellite-derived vegetation indicators and
-    machine learning to estimate crop yield and
-    identify environmental risk factors.
+st.divider()
 
-    ### Farmer-facing inputs
+st.header(
+    "🌾 About AgriSense AI"
+)
 
-    The farmer only needs:
+st.write(
+    "AgriSense AI is an agricultural decision-support "
+    "system designed for Zambia."
+)
 
-    - Crop
-    - Farm size
-    - District
-    - Planting date
+st.write(
+    "The system combines agricultural survey data, "
+    "rainfall information, soil characteristics, "
+    "satellite-derived vegetation indicators and "
+    "machine learning to estimate crop yield and "
+    "identify environmental risk factors."
+)
 
-    The system handles the environmental feature
-    engineering behind the scenes.
+st.subheader(
+    "Farmer-facing inputs"
+)
 
-    ### Important
+st.write(
+    "The farmer only needs:"
+)
 
-    AgriSense provides decision-support information,
-    not a guarantee of future agricultural production.
-    Actual yields depend on weather, management,
-    pests, disease, seed quality and other factors.
-    """
+st.write(
+    "- 🌾 Crop"
+)
+
+st.write(
+    "- 📐 Farm size"
+)
+
+st.write(
+    "- 📍 District"
+)
+
+st.write(
+    "- 📅 Planting date"
+)
+
+st.write(
+    "The system handles environmental feature "
+    "engineering behind the scenes."
+)
+
+st.subheader(
+    "Important"
+)
+
+st.warning(
+    "AgriSense provides decision-support information, "
+    "not a guarantee of future agricultural production. "
+    "Actual yields depend on weather, management, pests, "
+    "disease, seed quality and other factors."
 )
