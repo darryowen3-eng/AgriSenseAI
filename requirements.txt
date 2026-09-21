@@ -8,8 +8,8 @@ scikit-learn==1.7.2
 xgboost==3.3.0
 joblib==1.5.2
 pydantic==2.12.4
-pydeck
-reportlab
+pydeck==0.9.3
+reportlab==5.0.1
 
 
 
