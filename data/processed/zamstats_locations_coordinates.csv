@@ -1,0 +1,688 @@
+PROV,DISTRICT,DIST,WARD,DISTRICT_clean,latitude,longitude
+Central,Chibombo,CHIBOMBO,CHIBOMBO,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,CHIKOBO,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,CHILOCHABALENJE,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,CHOLOKELO,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,CHUNGA,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,KABILE,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,KAKOMA,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,KALOLA,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,KAMAILA,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,KATUBA,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,KEEMBE,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,MALAMBANYAMA,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,MASHIKILI,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,MUCHENJE,Chibombo,-14.857,27.64
+Central,Chibombo,CHIBOMBO,MUUNDU,Chibombo,-14.857,27.64
+Central,Chisamba,CHISAMBA,CHIKONKOMENE,Chisamba,-14.772,28.459
+Central,Chisamba,CHISAMBA,CHISAMBA,Chisamba,-14.772,28.459
+Central,Chisamba,CHISAMBA,KAMANO,Chisamba,-14.772,28.459
+Central,Chisamba,CHISAMBA,LITETA,Chisamba,-14.772,28.459
+Central,Chisamba,CHISAMBA,MONANGOMBE,Chisamba,-14.772,28.459
+Central,Chisamba,CHISAMBA,MULUNGUSHI,Chisamba,-14.772,28.459
+Central,Chisamba,CHISAMBA,MUSWISHI,Chisamba,-14.772,28.459
+Central,Chisamba,CHISAMBA,MUTENGA,Chisamba,-14.772,28.459
+Central,Chisamba,CHISAMBA,MWAPULA,Chisamba,-14.772,28.459
+Central,Chitambo,CHITAMBO,CHALILO,Chitambo,-12.543,30.4
+Central,Chitambo,CHITAMBO,KANONA,Chitambo,-12.543,30.4
+Central,Chitambo,CHITAMBO,NAKATAMBO,Chitambo,-12.543,30.4
+Central,Kabwe,KABWE,BWACHA,Kabwe,-14.458,28.4
+Central,Kabwe,KABWE,KALONGA,Kabwe,-14.458,28.4
+Central,Kabwe,KABWE,LUANSASE,Kabwe,-14.458,28.4
+Central,Kabwe,KABWE,MPIMA,Kabwe,-14.458,28.4
+Central,Kabwe,KABWE,MUWOWO EAST,Kabwe,-14.458,28.4
+Central,Kabwe,KABWE,WAYA,Kabwe,-14.458,28.4
+Central,Kapiri Mposhi,KAPIRI MPOSHI,CHANG'ONDO,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,KAKWELESA,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,KAPIRI MPOSHI,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,KASHITU,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,LUKANGA,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,LUNCHU,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,LUNSEMFWA,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,MUBOFWE,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,MUNGA,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,MUSHIMBILI,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,MUTETESHI,Kapiri Mposhi,-14.196,28.487
+Central,Kapiri Mposhi,KAPIRI MPOSHI,NCHEMBWE,Kapiri Mposhi,-14.196,28.487
+Central,Luano,LUANO,KAMIMBYA,Luano,-14.461,29.568
+Central,Luano,LUANO,KATUKUTU,Luano,-14.461,29.568
+Central,Luano,LUANO,LUNDASHI,Luano,-14.461,29.568
+Central,Luano,LUANO,MUNDA,Luano,-14.461,29.568
+Central,Luano,LUANO,NKOMASHI,Luano,-14.461,29.568
+Central,Mkushi,MKUSHI,CHIBEFWE,Mkushi,-13.765,29.483
+Central,Mkushi,MKUSHI,CHITINA,Mkushi,-13.765,29.483
+Central,Mkushi,MKUSHI,KALWA,Mkushi,-13.765,29.483
+Central,Mkushi,MKUSHI,MATUKU,Mkushi,-13.765,29.483
+Central,Mkushi,MKUSHI,MUNSAKAMBA,Mkushi,-13.765,29.483
+Central,Mkushi,MKUSHI,NKOLONGA,Mkushi,-13.765,29.483
+Central,Mkushi,MKUSHI,NKULUMASHIBA,Mkushi,-13.765,29.483
+Central,Mkushi,MKUSHI,TEMBWE,Mkushi,-13.765,29.483
+Central,Mumbwa,MUMBWA,CHISALU,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,KALWANYEMBE,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,MATALA,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,MUMBA,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,MUPONA,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,NAKASAKA,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,NALUBANDA,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,NALUSANGA,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,SHICHANZU,Mumbwa,-14.957,26.469
+Central,Mumbwa,MUMBWA,SHIMBIZHI,Mumbwa,-14.957,26.469
+Central,Ngabwe,NGABWE,CHISANGA,Ngabwe,-14.095,27.378
+Central,Ngabwe,NGABWE,CHISANGWA,Ngabwe,-14.095,27.378
+Central,Ngabwe,NGABWE,IWONDE,Ngabwe,-14.095,27.378
+Central,Serenje,SERENJE,CHISOMO,Serenje,-13.189,30.598
+Central,Serenje,SERENJE,IBOLELO,Serenje,-13.189,30.598
+Central,Serenje,SERENJE,KASHISHI,Serenje,-13.189,30.598
+Central,Serenje,SERENJE,MASANINGA,Serenje,-13.189,30.598
+Central,Serenje,SERENJE,MBASWA,Serenje,-13.189,30.598
+Central,Serenje,SERENJE,MUCHINDA,Serenje,-13.189,30.598
+Central,Shibuyunji,SHIBUYUNJI,KAPYANGA EAST,Shibuyunji,-15.332,27.683
+Central,Shibuyunji,SHIBUYUNJI,KAPYANGA WEST,Shibuyunji,-15.332,27.683
+Central,Shibuyunji,SHIBUYUNJI,MUTOMBE,Shibuyunji,-15.332,27.683
+Central,Shibuyunji,SHIBUYUNJI,NAMPUNDWE,Shibuyunji,-15.332,27.683
+Central,Shibuyunji,SHIBUYUNJI,SALA,Shibuyunji,-15.332,27.683
+Copperbelt,Chililabombwe,CHILILABOMBWE,CHITAMBI,Chililabombwe,-12.358,27.761
+Copperbelt,Chililabombwe,CHILILABOMBWE,HELEN KAUNDA,Chililabombwe,-12.358,27.761
+Copperbelt,Chililabombwe,CHILILABOMBWE,KAWAMA,Chililabombwe,-12.358,27.761
+Copperbelt,Chililabombwe,CHILILABOMBWE,MUKUKA,Chililabombwe,-12.358,27.761
+Copperbelt,Chingola,CHINGOLA,CHINGOLA,Chingola,-12.504,27.788
+Copperbelt,Chingola,CHINGOLA,KABUNDI,Chingola,-12.504,27.788
+Copperbelt,Kalulushi,KALULUSH,KALUNGWISHI,Kalulushi,-12.761,27.855
+Copperbelt,Kalulushi,KALULUSH,LUKOSHI,Kalulushi,-12.761,27.855
+Copperbelt,Kalulushi,KALULUSH,NSOKOLOKO,Kalulushi,-12.761,27.855
+Copperbelt,Kitwe,KITWE,BUPE,Kitwe,-12.83,28.262
+Copperbelt,Kitwe,KITWE,CHANTETE,Kitwe,-12.83,28.262
+Copperbelt,Kitwe,KITWE,CHIMWEMWE,Kitwe,-12.83,28.262
+Copperbelt,Kitwe,KITWE,ITIMPI,Kitwe,-12.83,28.262
+Copperbelt,Kitwe,KITWE,KAMATIPA,Kitwe,-12.83,28.262
+Copperbelt,Kitwe,KITWE,KWACHA,Kitwe,-12.83,28.262
+Copperbelt,Kitwe,KITWE,LUANGWA,Kitwe,-12.83,28.262
+Copperbelt,Luanshya,LUANSHYA,BALUBA,Luanshya,-13.074,28.348
+Copperbelt,Luanshya,LUANSHYA,BUNTUNGWA,Luanshya,-13.074,28.348
+Copperbelt,Luanshya,LUANSHYA,LEVI CHITO,Luanshya,-13.074,28.348
+Copperbelt,Luanshya,LUANSHYA,MPUNDU,Luanshya,-13.074,28.348
+Copperbelt,Luanshya,LUANSHYA,MWAISENI,Luanshya,-13.074,28.348
+Copperbelt,Luanshya,LUANSHYA,TWASHUKA,Luanshya,-13.074,28.348
+Copperbelt,Lufwanyama,LUFWANYAMA,KABUNDIA,Lufwanyama,-12.951,27.572
+Copperbelt,Lufwanyama,LUFWANYAMA,KAFUBU,Lufwanyama,-12.951,27.572
+Copperbelt,Lufwanyama,LUFWANYAMA,KANSANTA,Lufwanyama,-12.951,27.572
+Copperbelt,Lufwanyama,LUFWANYAMA,KATEMBULA,Lufwanyama,-12.951,27.572
+Copperbelt,Lufwanyama,LUFWANYAMA,LUSWISHI,Lufwanyama,-12.951,27.572
+Copperbelt,Lufwanyama,LUFWANYAMA,MILOPA,Lufwanyama,-12.951,27.572
+Copperbelt,Lufwanyama,LUFWANYAMA,MUKUMBO,Lufwanyama,-12.951,27.572
+Copperbelt,Lufwanyama,LUFWANYAMA,SOKONTWE,Lufwanyama,-12.951,27.572
+Copperbelt,Masaiti,MASAITI,CHINONDO,Masaiti,-13.342,28.686
+Copperbelt,Masaiti,MASAITI,KATUBA,Masaiti,-13.342,28.686
+Copperbelt,Masaiti,MASAITI,LUANSOBE,Masaiti,-13.342,28.686
+Copperbelt,Masaiti,MASAITI,MAJALIWA,Masaiti,-13.342,28.686
+Copperbelt,Masaiti,MASAITI,MIPUTU,Masaiti,-13.342,28.686
+Copperbelt,Masaiti,MASAITI,MWATISHI,Masaiti,-13.342,28.686
+Copperbelt,Mpongwe,MPONGWE,KANYENDA,Mpongwe,-13.574,27.635
+Copperbelt,Mpongwe,MPONGWE,MPONGWE CENTRAL,Mpongwe,-13.574,27.635
+Copperbelt,Mpongwe,MPONGWE,MUSOFU,Mpongwe,-13.574,27.635
+Copperbelt,Mpongwe,MPONGWE,NTANDA,Mpongwe,-13.574,27.635
+Copperbelt,Mufulira,MUFULIRA,HANKY KALANGA,Mufulira,-12.561,28.254
+Copperbelt,Mufulira,MUFULIRA,LUANSOBE,Mufulira,-12.561,28.254
+Copperbelt,Mufulira,MUFULIRA,MUPAMBE,Mufulira,-12.561,28.254
+Copperbelt,Ndola,NDOLA,KANTOLOMBA,Ndola,-12.946,28.536
+Copperbelt,Ndola,NDOLA,MAPALO,Ndola,-12.946,28.536
+Copperbelt,Ndola,NDOLA,MUKUBA,Ndola,-12.946,28.536
+Copperbelt,Ndola,NDOLA,PAMODZI,Ndola,-12.946,28.536
+Eastern,Chadiza,CHADIZA,CHADIZA,Chadiza,-14.113,32.476
+Eastern,Chadiza,CHADIZA,CHILENGA,Chadiza,-14.113,32.476
+Eastern,Chadiza,CHADIZA,KAMPINI,Chadiza,-14.113,32.476
+Eastern,Chadiza,CHADIZA,KAPACHI,Chadiza,-14.113,32.476
+Eastern,Chadiza,CHADIZA,NAVILURI,Chadiza,-14.113,32.476
+Eastern,Chadiza,CHADIZA,TAFERANSONI,Chadiza,-14.113,32.476
+Eastern,Chama,CHAMA,Bazimu,Chama,-11.274,32.798
+Eastern,Chama,CHAMA,Chisunga,Chama,-11.274,32.798
+Eastern,Chama,CHAMA,Kamphemba,Chama,-11.274,32.798
+Eastern,Chama,CHAMA,Lupamazi,Chama,-11.274,32.798
+Eastern,Chama,CHAMA,Mapamba,Chama,-11.274,32.798
+Eastern,Chama,CHAMA,Muchinga,Chama,-11.274,32.798
+Eastern,Chasefu,CHASEFU,CHABOLI,Chasefu,-11.922,33.154
+Eastern,Chasefu,CHASEFU,KAPILISANGA,Chasefu,-11.922,33.154
+Eastern,Chasefu,CHASEFU,LUWEREZI,Chasefu,-11.922,33.154
+Eastern,Chasefu,CHASEFU,MAGODI,Chasefu,-11.922,33.154
+Eastern,Chasefu,CHASEFU,SUSA,Chasefu,-11.922,33.154
+Eastern,Chipangali,CHIPANGA,CHIPANGALI,Chipangali,-13.319,32.68
+Eastern,Chipangali,CHIPANGA,KASENGA,Chipangali,-13.319,32.68
+Eastern,Chipangali,CHIPANGA,LUNKHUSWE,Chipangali,-13.319,32.68
+Eastern,Chipangali,CHIPANGA,MADZIATUBA,Chipangali,-13.319,32.68
+Eastern,Chipangali,CHIPANGA,MSANDILE,Chipangali,-13.319,32.68
+Eastern,Chipangali,CHIPANGA,NTHOPE,Chipangali,-13.319,32.68
+Eastern,Chipangali,CHIPANGA,RUKUZYE,Chipangali,-13.319,32.68
+Eastern,Chipangali,CHIPANGA,SISINJE,Chipangali,-13.319,32.68
+Eastern,Chipata,CHIPATA,DILIKA,Chipata,-13.742,32.637
+Eastern,Chipata,CHIPATA,KHOVA,Chipata,-13.742,32.637
+Eastern,Chipata,CHIPATA,MAKANGILA,Chipata,-13.742,32.637
+Eastern,Chipata,CHIPATA,MASUPE,Chipata,-13.742,32.637
+Eastern,Chipata,CHIPATA,MSANGA,Chipata,-13.742,32.637
+Eastern,Chipata,CHIPATA,MWAMI,Chipata,-13.742,32.637
+Eastern,Chipata,CHIPATA,NSINGO,Chipata,-13.742,32.637
+Eastern,Kasenengwa,KASENENGWA,CHIPARAMBA,Kasenengwa,-13.666,32.265
+Eastern,Kasenengwa,KASENENGWA,KWENJE,Kasenengwa,-13.666,32.265
+Eastern,Kasenengwa,KASENENGWA,MAKUNGWA,Kasenengwa,-13.666,32.265
+Eastern,Kasenengwa,KASENENGWA,MPUNZA,Kasenengwa,-13.666,32.265
+Eastern,Kasenengwa,KASENENGWA,NGSONGWE,Kasenengwa,-13.666,32.265
+Eastern,Katete,KATETE,CHAVUKA,Katete,-14.048,32.022
+Eastern,Katete,KATETE,CHIMTENDE,Katete,-14.048,32.022
+Eastern,Katete,KATETE,DOLE,Katete,-14.048,32.022
+Eastern,Katete,KATETE,KADULA,Katete,-14.048,32.022
+Eastern,Katete,KATETE,KAFUMBWE,Katete,-14.048,32.022
+Eastern,Katete,KATETE,KAZAKALUBA,Katete,-14.048,32.022
+Eastern,Katete,KATETE,MKAIKA,Katete,-14.048,32.022
+Eastern,Katete,KATETE,MPHANGWE,Katete,-14.048,32.022
+Eastern,Katete,KATETE,VULAMKOKO,Katete,-14.048,32.022
+Eastern,Lumezi,LUMEZI,CHAMTOWA,Lumezi,-12.696,32.539
+Eastern,Lumezi,LUMEZI,CHIBANDE,Lumezi,-12.696,32.539
+Eastern,Lumezi,LUMEZI,KAIKUMBE,Lumezi,-12.696,32.539
+Eastern,Lumezi,LUMEZI,KAPANGALA,Lumezi,-12.696,32.539
+Eastern,Lumezi,LUMEZI,LUKUSUZI,Lumezi,-12.696,32.539
+Eastern,Lumezi,LUMEZI,LUMIMBA,Lumezi,-12.696,32.539
+Eastern,Lumezi,LUMEZI,WACHITANGACHI,Lumezi,-12.696,32.539
+Eastern,Lundazi,LUNDAZI,CHILOLA,Lundazi,-12.415,33.337
+Eastern,Lundazi,LUNDAZI,CHIMALIRO,Lundazi,-12.415,33.337
+Eastern,Lundazi,LUNDAZI,LUNEVWA,Lundazi,-12.415,33.337
+Eastern,Lundazi,LUNDAZI,MNYAMAZI,Lundazi,-12.415,33.337
+Eastern,Lundazi,LUNDAZI,MPHAMBA,Lundazi,-12.415,33.337
+Eastern,Lundazi,LUNDAZI,MSUZI,Lundazi,-12.415,33.337
+Eastern,Lundazi,LUNDAZI,NDONDA,Lundazi,-12.415,33.337
+Eastern,Lundazi,LUNDAZI,VUU,Lundazi,-12.415,33.337
+Eastern,Lusangazi,LUSANGAZI,CHIKOWA,Lusangazi,-13.775,31.409
+Eastern,Lusangazi,LUSANGAZI,LUSANGAZI,Lusangazi,-13.775,31.409
+Eastern,Lusangazi,LUSANGAZI,LUTWAZI,Lusangazi,-13.775,31.409
+Eastern,Lusangazi,LUSANGAZI,MATEYO MZEKA,Lusangazi,-13.775,31.409
+Eastern,Lusangazi,LUSANGAZI,MAWANDA,Lusangazi,-13.775,31.409
+Eastern,Lusangazi,LUSANGAZI,NYAKAWISE,Lusangazi,-13.775,31.409
+Eastern,Mambwe,MAMBWE,CHIPAPA,Mambwe,-13.357,32.024
+Eastern,Mambwe,MAMBWE,JUMBE,Mambwe,-13.357,32.024
+Eastern,Mambwe,MAMBWE,KASAMANDA,Mambwe,-13.357,32.024
+Eastern,Mambwe,MAMBWE,MDIMA,Mambwe,-13.357,32.024
+Eastern,Mambwe,MAMBWE,MSORO,Mambwe,-13.357,32.024
+Eastern,Mambwe,MAMBWE,NCHEKA,Mambwe,-13.357,32.024
+Eastern,Mambwe,MAMBWE,NSEFU,Mambwe,-13.357,32.024
+Eastern,Nyimba,NYIMBA,CHINAMBI,Nyimba,-14.393,30.582
+Eastern,Nyimba,NYIMBA,CHIWEZA,Nyimba,-14.393,30.582
+Eastern,Nyimba,NYIMBA,KALIWE,Nyimba,-14.393,30.582
+Eastern,Nyimba,NYIMBA,LUANGWA,Nyimba,-14.393,30.582
+Eastern,Nyimba,NYIMBA,LWEZI,Nyimba,-14.393,30.582
+Eastern,Nyimba,NYIMBA,MOMBE,Nyimba,-14.393,30.582
+Eastern,Nyimba,NYIMBA,MSIMA,Nyimba,-14.393,30.582
+Eastern,Nyimba,NYIMBA,NYIMBA,Nyimba,-14.393,30.582
+Eastern,Nyimba,NYIMBA,VIZIMUMBA,Nyimba,-14.393,30.582
+Eastern,Petauke,PETAUKE,KANYANGA,Petauke,-14.377,31.283
+Eastern,Petauke,PETAUKE,KAUMBWE,Petauke,-14.377,31.283
+Eastern,Petauke,PETAUKE,KOVYANE,Petauke,-14.377,31.283
+Eastern,Petauke,PETAUKE,LUSINDE,Petauke,-14.377,31.283
+Eastern,Petauke,PETAUKE,MANJAZI,Petauke,-14.377,31.283
+Eastern,Petauke,PETAUKE,MBALA,Petauke,-14.377,31.283
+Eastern,Petauke,PETAUKE,MSUMBAZI,Petauke,-14.377,31.283
+Eastern,Petauke,PETAUKE,NYIKA,Petauke,-14.377,31.283
+Eastern,Petauke,PETAUKE,ONGOLWE,Petauke,-14.377,31.283
+Eastern,Sinda,SINDA,CHAMAKUWI,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,CHILONGOZI,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,CHINGHOMBE,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,CHIWUYU,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,KAPUNGWE,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,KASANGAZI,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,MATAMBAZI,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,MNGDOMBA,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,MNYAMANZI,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,MWANGAILA,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,NCHINGILIZYA,Sinda,-14.258,31.778
+Eastern,Sinda,SINDA,SINDA,Sinda,-14.258,31.778
+Eastern,Vubwi,VUBWI,MBOZI,Vubwi,-13.994,32.906
+Eastern,Vubwi,VUBWI,MLAWE,Vubwi,-13.994,32.906
+Eastern,Vubwi,VUBWI,SINDEMISALE,Vubwi,-13.994,32.906
+Eastern,Vubwi,VUBWI,VUBWI,Vubwi,-13.994,32.906
+Luapula,Chembe,CHEMBE,KASOMALWELA,Chembe,-11.746,28.642
+Luapula,Chembe,CHEMBE,LUKOLA,Chembe,-11.746,28.642
+Luapula,Chiengi,CHIENGE,CHIBAMBA,Chienge,-8.777,29.11
+Luapula,Chiengi,CHIENGE,CHIENGE,Chienge,-8.777,29.11
+Luapula,Chiengi,CHIENGE,CHIPAMBA,Chienge,-8.777,29.11
+Luapula,Chiengi,CHIENGE,CHITUNDA,Chienge,-8.777,29.11
+Luapula,Chiengi,CHIENGE,IFUNA,Chienge,-8.777,29.11
+Luapula,Chiengi,CHIENGE,KALUNGWISHI,Chienge,-8.777,29.11
+Luapula,Chiengi,CHIENGE,KATETE,Chienge,-8.777,29.11
+Luapula,Chiengi,CHIENGE,LUNCHINDA,Chienge,-8.777,29.11
+Luapula,Chiengi,CHIENGE,MUNWA,Chienge,-8.777,29.11
+Luapula,Chifumunabuli,CHIFUNABULI,CHIFUNABULI,Chifunabuli,-11.09,29.657
+Luapula,Chifumunabuli,CHIFUNABULI,CHINKUTILA,Chifunabuli,-11.09,29.657
+Luapula,Chifumunabuli,CHIFUNABULI,CHISHI,Chifunabuli,-11.09,29.657
+Luapula,Chifumunabuli,CHIFUNABULI,KAFUMBO,Chifunabuli,-11.09,29.657
+Luapula,Chifumunabuli,CHIFUNABULI,KASABA,Chifunabuli,-11.09,29.657
+Luapula,Chifumunabuli,CHIFUNABULI,KASONGOLE,Chifunabuli,-11.09,29.657
+Luapula,Chifumunabuli,CHIFUNABULI,LUBWE,Chifunabuli,-11.09,29.657
+Luapula,Chifumunabuli,CHIFUNABULI,MBABALA,Chifunabuli,-11.09,29.657
+Luapula,Chipili,CHIPILI,KABUTA,Chipili,-10.48,29.14
+Luapula,Chipili,CHIPILI,MUMBWE,Chipili,-10.48,29.14
+Luapula,Chipili,CHIPILI,NALUPEMBE,Chipili,-10.48,29.14
+Luapula,Chipili,CHIPILI,NKONGE,Chipili,-10.48,29.14
+Luapula,Chipili,CHIPILI,NSENGA,Chipili,-10.48,29.14
+Luapula,Kawambwa,KAWAMBWA,CHIKANDA,Kawambwa,-9.765,29.376
+Luapula,Kawambwa,KAWAMBWA,FISAKA,Kawambwa,-9.765,29.376
+Luapula,Kawambwa,KAWAMBWA,ILOMBE,Kawambwa,-9.765,29.376
+Luapula,Kawambwa,KAWAMBWA,KABANSE,Kawambwa,-9.765,29.376
+Luapula,Kawambwa,KAWAMBWA,KAWAMBWA,Kawambwa,-9.765,29.376
+Luapula,Kawambwa,KAWAMBWA,LUENA,Kawambwa,-9.765,29.376
+Luapula,Kawambwa,KAWAMBWA,NG'ONA,Kawambwa,-9.765,29.376
+Luapula,Kawambwa,KAWAMBWA,PAMBASHE,Kawambwa,-9.765,29.376
+Luapula,Kawambwa,KAWAMBWA,SENGA,Kawambwa,-9.765,29.376
+Luapula,Lunga,LUNGA,LUNGA,Lunga,-11.57,30.123
+Luapula,Lunga,LUNGA,NCHETA,Lunga,-11.57,30.123
+Luapula,Mansa,MANSA,CHIBELEKA,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,CHILYAPA,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,CHOFOSHI,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,KATANGISHI,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,LUKANGABA,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,MANSA,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,MISAKALALA,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,MUCHINKA,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,MUSABA,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,MUTUNA,Mansa,-11.124,28.965
+Luapula,Mansa,MANSA,NAMWANDWE,Mansa,-11.124,28.965
+Luapula,Milenge,MILENGE,FISHIKWA,Milenge,-11.938,29.212
+Luapula,Milenge,MILENGE,KAPALALA,Milenge,-11.938,29.212
+Luapula,Milenge,MILENGE,LWELA,Milenge,-11.938,29.212
+Luapula,Milenge,MILENGE,MILAMBO,Milenge,-11.938,29.212
+Luapula,Milenge,MILENGE,NSUNGA,Milenge,-11.938,29.212
+Luapula,Mwansabombwe,MWANSABOMBWE,KABALENGE,Mwansabombwe,-9.955,28.778
+Luapula,Mwansabombwe,MWANSABOMBWE,KAZEMBE,Mwansabombwe,-9.955,28.778
+Luapula,Mwansabombwe,MWANSABOMBWE,MBERESHI,Mwansabombwe,-9.955,28.778
+Luapula,Mwansabombwe,MWANSABOMBWE,MWANSABOMBWE,Mwansabombwe,-9.955,28.778
+Luapula,Mwansabombwe,MWANSABOMBWE,PEMBE,Mwansabombwe,-9.955,28.778
+Luapula,Mwense,Mwense,KALANGA,Mwense,-10.52,28.74
+Luapula,Mwense,MWENSE,KALANGA,Mwense,-10.52,28.74
+Luapula,Mwense,MWENSE,KAOMBE,Mwense,-10.52,28.74
+Luapula,Mwense,MWENSE,KAPELA,Mwense,-10.52,28.74
+Luapula,Mwense,MWENSE,LUCHE,Mwense,-10.52,28.74
+Luapula,Mwense,MWENSE,MPASA,Mwense,-10.52,28.74
+Luapula,Mwense,MWENSE,NSOFI,Mwense,-10.52,28.74
+Luapula,Mwense,MWENSE,PEBEKABESA,Mwense,-10.52,28.74
+Luapula,Nchelenge,NCHELENGE,CHISENGA,Nchelenge,-9.368,28.727
+Luapula,Nchelenge,NCHELENGE,KABUTA,Nchelenge,-9.368,28.727
+Luapula,Nchelenge,NCHELENGE,KASHIKISHI,Nchelenge,-9.368,28.727
+Luapula,Nchelenge,NCHELENGE,KATOFYO,Nchelenge,-9.368,28.727
+Luapula,Nchelenge,NCHELENGE,MOFWE,Nchelenge,-9.368,28.727
+Luapula,Nchelenge,NCHELENGE,MULWE,Nchelenge,-9.368,28.727
+Luapula,Nchelenge,NCHELENGE,MWATISHI,Nchelenge,-9.368,28.727
+Luapula,Nchelenge,NCHELENGE,NCHELENGE,Nchelenge,-9.368,28.727
+Luapula,Nchelenge,NCHELENGE,SHABO,Nchelenge,-9.368,28.727
+Luapula,Samfya,SAMFYA,CHIMANA,Samfya,-11.747,29.648
+Luapula,Samfya,SAMFYA,KATANSHYA,Samfya,-11.747,29.648
+Luapula,Samfya,SAMFYA,LUPILI,Samfya,-11.747,29.648
+Luapula,Samfya,SAMFYA,MANO,Samfya,-11.747,29.648
+Lusaka,Chilanga,CHILANGA,CHILANGA,Chilanga,-15.451,28.088
+Lusaka,Chilanga,CHILANGA,CHILONGOLO,Chilanga,-15.451,28.088
+Lusaka,Chilanga,CHILANGA,KASUPE,Chilanga,-15.451,28.088
+Lusaka,Chilanga,CHILANGA,MOUNT MAKULU,Chilanga,-15.451,28.088
+Lusaka,Chilanga,CHILANGA,MWEMBESHI,Chilanga,-15.451,28.088
+Lusaka,Chilanga,CHILANGA,NAMALOMBWE,Chilanga,-15.451,28.088
+Lusaka,Chongwe,CHONGWE,CHINKULI,Chongwe,-15.39,28.62
+Lusaka,Chongwe,CHONGWE,CHONGWE,Chongwe,-15.39,28.62
+Lusaka,Chongwe,CHONGWE,KAPETE,Chongwe,-15.39,28.62
+Lusaka,Chongwe,CHONGWE,KASENGA,Chongwe,-15.39,28.62
+Lusaka,Chongwe,CHONGWE,MADIDO,Chongwe,-15.39,28.62
+Lusaka,Chongwe,CHONGWE,MANYIKA,Chongwe,-15.39,28.62
+Lusaka,Chongwe,CHONGWE,NGWERERE,Chongwe,-15.39,28.62
+Lusaka,Chongwe,CHONGWE,NTANDABALE,Chongwe,-15.39,28.62
+Lusaka,Chongwe,CHONGWE,PALABANA,Chongwe,-15.39,28.62
+Lusaka,Kafue,KAFUE,KAFUE,Kafue,-15.723,28.677
+Lusaka,Kafue,KAFUE,MALUNDU,Kafue,-15.723,28.677
+Lusaka,Kafue,KAFUE,MUNGU,Kafue,-15.723,28.677
+Lusaka,Kafue,KAFUE,SHABUSALE,Kafue,-15.723,28.677
+Lusaka,Luangwa,LUANGWA,KALULUZI,Luangwa,-15.353,30.068
+Lusaka,Luangwa,LUANGWA,MBURUMA,Luangwa,-15.353,30.068
+Lusaka,Lusaka,LUSAKA,Harry Mwanga Nkumbula,Lusaka,-15.426,28.313
+Lusaka,Lusaka,LUSAKA,MAKENI VILLA,Lusaka,-15.426,28.313
+Lusaka,Lusaka,LUSAKA,MWEMBESHI,Lusaka,-15.426,28.313
+Lusaka,Rufunsa,RUFUNSA,BUNDA_BUNDA,Rufunsa,-15.164,29.465
+Lusaka,Rufunsa,RUFUNSA,RUFUNSA,Rufunsa,-15.164,29.465
+Muchinga,Chinsali,CHINSALI,CHILINDA,Chinsali,-10.298,32.215
+Muchinga,Chinsali,CHINSALI,ICHINGA,Chinsali,-10.298,32.215
+Muchinga,Chinsali,CHINSALI,ITUNTWE,Chinsali,-10.298,32.215
+Muchinga,Chinsali,CHINSALI,LUBWA,Chinsali,-10.298,32.215
+Muchinga,Chinsali,CHINSALI,MILEMBA,Chinsali,-10.298,32.215
+Muchinga,Chinsali,CHINSALI,MUNWAKUBILI,Chinsali,-10.298,32.215
+Muchinga,Chinsali,CHINSALI,NKAKULA,Chinsali,-10.298,32.215
+Muchinga,Isoka,ISOKA,KANTENSHYA,Isoka,-10.022,32.773
+Muchinga,Isoka,ISOKA,KANYALA,Isoka,-10.022,32.773
+Muchinga,Isoka,ISOKA,KASOKA,Isoka,-10.022,32.773
+Muchinga,Isoka,ISOKA,KAWENGA,Isoka,-10.022,32.773
+Muchinga,Isoka,ISOKA,LUANGWA,Isoka,-10.022,32.773
+Muchinga,Isoka,ISOKA,NKOMBWA,Isoka,-10.022,32.773
+Muchinga,Kanchibiya,KANCHIBIYA,CHIBWA,Kanchibiya,-11.535,30.863
+Muchinga,Kanchibiya,KANCHIBIYA,CHINAMA,Kanchibiya,-11.535,30.863
+Muchinga,Kanchibiya,KANCHIBIYA,LUBALESHI,Kanchibiya,-11.535,30.863
+Muchinga,Kanchibiya,KANCHIBIYA,MANSHA,Kanchibiya,-11.535,30.863
+Muchinga,Kanchibiya,KANCHIBIYA,MBATI,Kanchibiya,-11.535,30.863
+Muchinga,Kanchibiya,KANCHIBIYA,MUNIKASHI,Kanchibiya,-11.535,30.863
+Muchinga,Lavushimanda,LAVUSHIMANDA,LUKULU,Lavushimanda,-12.593,31.023
+Muchinga,Lavushimanda,LAVUSHIMANDA,MUPAMADZI,Lavushimanda,-12.593,31.023
+Muchinga,Lavushimanda,LAVUSHIMANDA,MUTINDO,Lavushimanda,-12.593,31.023
+Muchinga,Mafinga,MAFINGA,KAKOMA,Mafinga,-10.323,33.263
+Muchinga,Mafinga,MAFINGA,KALANGA,Mafinga,-10.323,33.263
+Muchinga,Mafinga,MAFINGA,LUHOKA,Mafinga,-10.323,33.263
+Muchinga,Mafinga,MAFINGA,MAHOBE,Mafinga,-10.323,33.263
+Muchinga,Mafinga,MAFINGA,MULULU,Mafinga,-10.323,33.263
+Muchinga,Mafinga,MAFINGA,THENDERE,Mafinga,-10.323,33.263
+Muchinga,Mpika,MPIKA,CHIFUNGWE,Mpika,-12.05,31.764
+Muchinga,Mpika,MPIKA,CHIPEMBELE,Mpika,-12.05,31.764
+Muchinga,Mpika,MPIKA,CHISHIBESONDE,Mpika,-12.05,31.764
+Muchinga,Mpika,MPIKA,MUKUNGWA,Mpika,-12.05,31.764
+Muchinga,Mpika,MPIKA,MUSAKANYA,Mpika,-12.05,31.764
+Muchinga,Mpika,MPIKA,NACHIKUFU,Mpika,-12.05,31.764
+Muchinga,Nakonde,NAKONDE,IKUMBI,Nakonde,-9.465,32.609
+Muchinga,Nakonde,NAKONDE,ILONDA,Nakonde,-9.465,32.609
+Muchinga,Nakonde,NAKONDE,MULALO,Nakonde,-9.465,32.609
+Muchinga,Nakonde,NAKONDE,MUSELE,Nakonde,-9.465,32.609
+Muchinga,Nakonde,NAKONDE,OLD FIFE,Nakonde,-9.465,32.609
+Muchinga,Shiwang'andu,SHIWANG'ANDU,CHIBINDA,Shiwang'Andu,-11.088,31.835
+Muchinga,Shiwang'andu,SHIWANG'ANDU,KULAMWELE,Shiwang'Andu,-11.088,31.835
+Muchinga,Shiwang'andu,SHIWANG'ANDU,MWICHE,Shiwang'Andu,-11.088,31.835
+Muchinga,Shiwang'andu,SHIWANG'ANDU,NYIMBWE,Shiwang'Andu,-11.088,31.835
+North Western,Chavuma,CHAVUMA,CHIYEKE,Chavuma,-13.293,22.32
+North Western,Chavuma,CHAVUMA,KALOMBO KAMISAMBA,Chavuma,-13.293,22.32
+North Western,Chavuma,CHAVUMA,LINGELENGENDA CHINWANDUMBA,Chavuma,-13.293,22.32
+North Western,Ikelenge,IKELENGE,IKELENG'I,Ikelenge,-11.254,24.215
+North Western,Ikelenge,IKELENGE,SAKEJI,Ikelenge,-11.254,24.215
+North Western,Kabompo,KABOMPO,CHIKENGE,Kabompo,-13.517,23.988
+North Western,Kabompo,KABOMPO,KABOMPO,Kabompo,-13.517,23.988
+North Western,Kabompo,KABOMPO,KAMAFWAFWA,Kabompo,-13.517,23.988
+North Western,Kabompo,KABOMPO,KATUVA,Kabompo,-13.517,23.988
+North Western,Kalumbila,KASEMPA,KALOMBE,Kalumbila,-12.362,25.671
+North Western,Kalumbila,KASEMPA,KAMUSONGOLWA,Kalumbila,-12.362,25.671
+North Western,Kalumbila,KASEMPA,KIKONKOMENE,Kalumbila,-12.362,25.671
+North Western,Kalumbila,KASEMPA,NJENGA,Kalumbila,-12.362,25.671
+North Western,Kalumbila,KASEMPA,NKENYAUNA,Kalumbila,-12.362,25.671
+North Western,Kasempa,KALUMBILA,CHOVWE,Kasempa,-13.795,26.257
+North Western,Kasempa,KALUMBILA,KIBANZA,Kasempa,-13.795,26.257
+North Western,Kasempa,KALUMBILA,KISASA,Kasempa,-13.795,26.257
+North Western,Kasempa,KALUMBILA,MATEBO,Kasempa,-13.795,26.257
+North Western,Kasempa,KALUMBILA,MUMBEZHI,Kasempa,-13.795,26.257
+North Western,Kasempa,KALUMBILA,MUMENA,Kasempa,-13.795,26.257
+North Western,Kasempa,KALUMBILA,SHILENDA,Kasempa,-13.795,26.257
+North Western,Kasempa,KALUMBILA,WABITUWO,Kasempa,-13.795,26.257
+North Western,Manyinga,MANYINGA,CHIFUWE NORTH,Manyinga,-13.081,24.312
+North Western,Manyinga,MANYINGA,KASHINAKAJI,Manyinga,-13.081,24.312
+North Western,Manyinga,MANYINGA,MANYINGA,Manyinga,-13.081,24.312
+North Western,Manyinga,MANYINGA,MUKOSHO,Manyinga,-13.081,24.312
+North Western,Mufumbwe,MUFUMBWE,CHIZELA,Mufumbwe,-13.766,25.035
+North Western,Mufumbwe,MUFUMBWE,KABIPUPU,Mufumbwe,-13.766,25.035
+North Western,Mufumbwe,MUFUMBWE,KALAMBU,Mufumbwe,-13.766,25.035
+North Western,Mufumbwe,MUFUMBWE,KAMINZEKENZEKE,Mufumbwe,-13.766,25.035
+North Western,Mufumbwe,MUFUMBWE,KASHIMA EAST,Mufumbwe,-13.766,25.035
+North Western,Mufumbwe,MUFUMBWE,MATUSHI,Mufumbwe,-13.766,25.035
+North Western,Mufumbwe,MUFUMBWE,SHIMPANDANGA,Mufumbwe,-13.766,25.035
+North Western,Mushindano,MUSHINDAMO,KALILELE,Mushindamo,-12.5,26.836
+North Western,Mushindano,MUSHINDAMO,KILUMBA,Mushindamo,-12.5,26.836
+North Western,Mwinilunga,MWINILUNGA,KABANDA,Mwinilunga,-12.156,24.586
+North Western,Mwinilunga,MWINILUNGA,KANYIKOMBOSHI,Mwinilunga,-12.156,24.586
+North Western,Mwinilunga,MWINILUNGA,KASAMPULA,Mwinilunga,-12.156,24.586
+North Western,Mwinilunga,MWINILUNGA,MULUMBI,Mwinilunga,-12.156,24.586
+North Western,Mwinilunga,MWINILUNGA,MUNDWIJI,Mwinilunga,-12.156,24.586
+North Western,Mwinilunga,MWINILUNGA,SAMUTEBA,Mwinilunga,-12.156,24.586
+North Western,Solwezi,SOLWEZI,KAPIJIMPANGA,Solwezi,-12.304,26.51
+North Western,Solwezi,SOLWEZI,KIMASALA,Solwezi,-12.304,26.51
+North Western,Solwezi,SOLWEZI,KYALALANKUBA,Solwezi,-12.304,26.51
+North Western,Solwezi,SOLWEZI,KYAWAMA,Solwezi,-12.304,26.51
+North Western,Zambezi,ZAMBEZI,CHILENG A CHIZENZI,Zambezi,-13.599,22.832
+North Western,Zambezi,ZAMBEZI,CHITOLOKI,Zambezi,-13.599,22.832
+North Western,Zambezi,ZAMBEZI,KASESI CHIVWEJI,Zambezi,-13.599,22.832
+North Western,Zambezi,ZAMBEZI,LUNKUNYI,Zambezi,-13.599,22.832
+North Western,Zambezi,ZAMBEZI,MPIDI KAKONG,Zambezi,-13.599,22.832
+North Western,Zambezi,ZAMBEZI,MUKANDA NKUNDA,Zambezi,-13.599,22.832
+North Western,Zambezi,ZAMBEZI,MUYEMBE,Zambezi,-13.599,22.832
+Northern,Chilubi,CHILUBI,BULILO,Chilubi,-11.09,30.295
+Northern,Chilubi,CHILUBI,KATAMBA,Chilubi,-11.09,30.295
+Northern,Chilubi,CHILUBI,MULANDA,Chilubi,-11.09,30.295
+Northern,Kaputa,KAPUTA,CHIPILI,Kaputa,-8.814,29.464
+Northern,Kaputa,KAPUTA,CHITANDALA,Kaputa,-8.814,29.464
+Northern,Kaputa,KAPUTA,CHOMA,Kaputa,-8.814,29.464
+Northern,Kaputa,KAPUTA,MIYONGA,Kaputa,-8.814,29.464
+Northern,Kaputa,KAPUTA,MOFWE,Kaputa,-8.814,29.464
+Northern,Kaputa,KAPUTA,MOWA,Kaputa,-8.814,29.464
+Northern,Kaputa,KAPUTA,MUKONGE,Kaputa,-8.814,29.464
+Northern,Kaputa,KAPUTA,MWAWE,Kaputa,-8.814,29.464
+Northern,Kasama,KASAMA,CHIBA,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,CHIBUNDU,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,CHILUNGA,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,CHUMBA,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,JULIA CHIKAMONEKA,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,KAPONGOLO,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,KASENGA,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,KUPUMAULA,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,LUKULU,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,LUKUPA,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,LUSENGA,Kasama,-10.551,31.029
+Northern,Kasama,KASAMA,MULILANSOLO,Kasama,-10.551,31.029
+Northern,Lunte,LUNTE,KALUNGWISHI,Lunte,-9.828,30.257
+Northern,Lunte,LUNTE,KASANSHI,Lunte,-9.828,30.257
+Northern,Lunte,LUNTE,LUNTE,Lunte,-9.828,30.257
+Northern,Lunte,LUNTE,MALAILA,Lunte,-9.828,30.257
+Northern,Lunte,LUNTE,MASONDE,Lunte,-9.828,30.257
+Northern,Lupososhi,LUPOSOSHI,KAELA,Lupososhi,-10.656,29.599
+Northern,Lupososhi,LUPOSOSHI,KAMPEMBA,Lupososhi,-10.656,29.599
+Northern,Lupososhi,LUPOSOSHI,MUFILI,Lupososhi,-10.656,29.599
+Northern,Luwingu,LUWINGU,IPUSUKILO,Luwingu,-10.552,30.182
+Northern,Luwingu,LUWINGU,KATOPOLA,Luwingu,-10.552,30.182
+Northern,Luwingu,LUWINGU,LWATA,Luwingu,-10.552,30.182
+Northern,Luwingu,LUWINGU,MUSHISHE,Luwingu,-10.552,30.182
+Northern,Luwingu,LUWINGU,MWELA WAMANGU,Luwingu,-10.552,30.182
+Northern,Luwingu,LUWINGU,NAMUKOLO,Luwingu,-10.552,30.182
+Northern,Mbala,MBALA,KALAMBO FALLS,Mbala,-8.964,31.472
+Northern,Mbala,MBALA,KAWIMBE,Mbala,-8.964,31.472
+Northern,Mbala,MBALA,KAZIMOLWA,Mbala,-8.964,31.472
+Northern,Mbala,MBALA,LWANDI,Mbala,-8.964,31.472
+Northern,Mbala,MBALA,MOTOMOTO,Mbala,-8.964,31.472
+Northern,Mbala,MBALA,NSUNZU,Mbala,-8.964,31.472
+Northern,Mporokoso,MPOROKOSO,CHIMBOFUMA,Mporokoso,-9.463,29.931
+Northern,Mporokoso,MPOROKOSO,CHISHAMWAMBA,Mporokoso,-9.463,29.931
+Northern,Mporokoso,MPOROKOSO,LUMANGWE,Mporokoso,-9.463,29.931
+Northern,Mporokoso,MPOROKOSO,MIKOMBA,Mporokoso,-9.463,29.931
+Northern,Mpulungu,MPULUNGU,CHILUMBA,Mpulungu,-8.983,30.717
+Northern,Mpulungu,MPULUNGU,CHISHA,Mpulungu,-8.983,30.717
+Northern,Mpulungu,MPULUNGU,ISUNGA,Mpulungu,-8.983,30.717
+Northern,Mpulungu,MPULUNGU,IYENDWE,Mpulungu,-8.983,30.717
+Northern,Mpulungu,MPULUNGU,LWAMBAZI,Mpulungu,-8.983,30.717
+Northern,Mpulungu,MPULUNGU,MANKONGA,Mpulungu,-8.983,30.717
+Northern,Mpulungu,MPULUNGU,MUMILA,Mpulungu,-8.983,30.717
+Northern,Mpulungu,MPULUNGU,TANGANYIKA,Mpulungu,-8.983,30.717
+Northern,Mungwi,MUNGWI,CHAMFUBU,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,IYAYA,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,KALUNGU,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,LUBALA,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,LUCHEWE,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,MABULA,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,MFINSHE,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,MPANDA,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,MUNGWI,Mungwi,-9.992,31.684
+Northern,Mungwi,MUNGWI,NGULULA,Mungwi,-9.992,31.684
+Northern,Nsama,NSAMA,KAKUSU,Nsama,-8.814,29.948
+Northern,Nsama,NSAMA,NSUMBU,Nsama,-8.814,29.948
+Northern,Senga,SENGA HILL,CHELA,Senga Hill,-9.277,31.826
+Northern,Senga,SENGA HILL,CHIMBILI,Senga Hill,-9.277,31.826
+Northern,Senga,SENGA HILL,IPEMBE,Senga Hill,-9.277,31.826
+Northern,Senga,SENGA HILL,LAPISHA,Senga Hill,-9.277,31.826
+Northern,Senga,SENGA HILL,MALAMBA,Senga Hill,-9.277,31.826
+Northern,Senga,SENGA HILL,MWILUZI,Senga Hill,-9.277,31.826
+Southern,Chikankata,CHIKANKATA,CHAKANZA,Chikankata,-16.032,28.22
+Southern,Chikankata,CHIKANKATA,CHITETE,Chikankata,-16.032,28.22
+Southern,Chikankata,CHIKANKATA,MABWETUBA,Chikankata,-16.032,28.22
+Southern,Chikankata,CHIKANKATA,NZINGU,Chikankata,-16.032,28.22
+Southern,Chirundu,CHIRUNDU,CHIRUNDU,Chirundu,-16.104,28.642
+Southern,Chirundu,CHIRUNDU,LUSITU,Chirundu,-16.104,28.642
+Southern,Chirundu,CHIRUNDU,MUSHUNGU,Chirundu,-16.104,28.642
+Southern,Chirundu,CHIRUNDU,NG'OMBE ILEDE,Chirundu,-16.104,28.642
+Southern,Chirundu,CHIRUNDU,SIKOONGO,Chirundu,-16.104,28.642
+Southern,Choma,CHOMA,BATOKA,Choma,-16.86,27.048
+Southern,Choma,CHOMA,CHILALANTAMBO,Choma,-16.86,27.048
+Southern,Choma,CHOMA,KABANZE-MAYOBO,Choma,-16.86,27.048
+Southern,Choma,CHOMA,MAPANZA,Choma,-16.86,27.048
+Southern,Choma,CHOMA,MASUKU,Choma,-16.86,27.048
+Southern,Choma,CHOMA,MUBULA,Choma,-16.86,27.048
+Southern,Choma,CHOMA,NGONGA,Choma,-16.86,27.048
+Southern,Choma,CHOMA,SIAMAMBO,Choma,-16.86,27.048
+Southern,Choma,CHOMA,SIKALONGO,Choma,-16.86,27.048
+Southern,Choma,CHOMA,SIMACHECHE,Choma,-16.86,27.048
+Southern,Choma,CHOMA,SIMAMVWA,Choma,-16.86,27.048
+Southern,Gwembe,GWEMBE,CHIBUWE,Gwembe,-16.661,28.005
+Southern,Gwembe,GWEMBE,JUMBO SOMPANI,Gwembe,-16.661,28.005
+Southern,Gwembe,GWEMBE,LUUMBO,Gwembe,-16.661,28.005
+Southern,Itezhi-Tezhi,ITEZHI TEZHI,BABIZHI,Itezhi-Tezhi,-15.923,25.873
+Southern,Itezhi-Tezhi,ITEZHI TEZHI,BANAMWAZE,Itezhi-Tezhi,-15.923,25.873
+Southern,Itezhi-Tezhi,ITEZHI TEZHI,BASANGA,Itezhi-Tezhi,-15.923,25.873
+Southern,Itezhi-Tezhi,ITEZHI TEZHI,ITUMBI,Itezhi-Tezhi,-15.923,25.873
+Southern,Itezhi-Tezhi,ITEZHI TEZHI,KAANZWA,Itezhi-Tezhi,-15.923,25.873
+Southern,Itezhi-Tezhi,ITEZHI TEZHI,MAKUNKU,Itezhi-Tezhi,-15.923,25.873
+Southern,Itezhi-Tezhi,ITEZHI TEZHI,MBILA,Itezhi-Tezhi,-15.923,25.873
+Southern,Itezhi-Tezhi,ITEZHI TEZHI,NYAMBO,Itezhi-Tezhi,-15.923,25.873
+Southern,Kalomo,KALOMO,CHAMUKA,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,CHAWILA,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,CHILESHA,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,KALONDA,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,KATANDA,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,MWAATA,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,NACHIKUNGU,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,NALUJA,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,OMBA,Kalomo,-16.843,26.431
+Southern,Kalomo,KALOMO,SIACHITEMA,Kalomo,-16.843,26.431
+Southern,Kazungula,KAZUNGULA,BOMBWE,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,CHOOMA,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,KATAPAZI,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,KAUWE,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,KAZUNGULA CENTRAL,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,MANDIA,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,MUKUNI,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,NGWEZI,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,NYAWA,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,SEKUTE,Kazungula,-17.051,25.695
+Southern,Kazungula,KAZUNGULA,SIKAUNZWE,Kazungula,-17.051,25.695
+Southern,Livingstone,LIVINGSTONE,DR.MUBITANA,Livingstone,-17.81,25.825
+Southern,Livingstone,LIVINGSTONE,KABILA,Livingstone,-17.81,25.825
+Southern,Livingstone,LIVINGSTONE,NAMATAMA,Livingstone,-17.81,25.825
+Southern,Livingstone,LIVINGSTONE,SIMONGA,Livingstone,-17.81,25.825
+Southern,Mazabuka,MAZABUKA,ITEBE,Mazabuka,-15.894,27.777
+Southern,Mazabuka,MAZABUKA,KAONGA,Mazabuka,-15.894,27.777
+Southern,Mazabuka,MAZABUKA,LUBOMBO,Mazabuka,-15.894,27.777
+Southern,Mazabuka,MAZABUKA,MAZABUKA CENTRAL,Mazabuka,-15.894,27.777
+Southern,Mazabuka,MAZABUKA,MUSUMA,Mazabuka,-15.894,27.777
+Southern,Mazabuka,MAZABUKA,NEGA NEGA,Mazabuka,-15.894,27.777
+Southern,Mazabuka,MAZABUKA,NGWEZI,Mazabuka,-15.894,27.777
+Southern,Monze,MONZE,BBOMBO,Monze,-16.129,27.342
+Southern,Monze,MONZE,BWEENGWA,Monze,-16.129,27.342
+Southern,Monze,MONZE,CHIPEMBELE,Monze,-16.129,27.342
+Southern,Monze,MONZE,CHONA,Monze,-16.129,27.342
+Southern,Monze,MONZE,CHOONGO EAST,Monze,-16.129,27.342
+Southern,Monze,MONZE,CHOONGO WEST,Monze,-16.129,27.342
+Southern,Monze,MONZE,HAMANGABA,Monze,-16.129,27.342
+Southern,Monze,MONZE,HATONTOLA,Monze,-16.129,27.342
+Southern,Monze,MONZE,KAILA,Monze,-16.129,27.342
+Southern,Monze,MONZE,KATIMBA,Monze,-16.129,27.342
+Southern,Monze,MONZE,KEEMBA,Monze,-16.129,27.342
+Southern,Monze,MONZE,MANUNGU,Monze,-16.129,27.342
+Southern,Monze,MONZE,MAYABA,Monze,-16.129,27.342
+Southern,Monze,MONZE,MONZE URBAN,Monze,-16.129,27.342
+Southern,Monze,MONZE,MWANZA CENTRAL,Monze,-16.129,27.342
+Southern,Monze,MONZE,MWANZA EAST,Monze,-16.129,27.342
+Southern,Namwala,NAMWALA,CHITONGO,Namwala,-15.957,26.792
+Southern,Namwala,NAMWALA,KANTENGWA,Namwala,-15.957,26.792
+Southern,Namwala,NAMWALA,MAALA,Namwala,-15.957,26.792
+Southern,Namwala,NAMWALA,MOOBOLA,Namwala,-15.957,26.792
+Southern,Namwala,NAMWALA,NAKAMBOMA,Namwala,-15.957,26.792
+Southern,Namwala,NAMWALA,NAMAKUBE,Namwala,-15.957,26.792
+Southern,Namwala,NAMWALA,NAMWALA CENTRAL,Namwala,-15.957,26.792
+Southern,Namwala,NAMWALA,NDEMA,Namwala,-15.957,26.792
+Southern,Namwala,NAMWALA,NGABO,Namwala,-15.957,26.792
+Southern,Pemba,PEMBA,DEMU,Pemba,-16.756,27.403
+Southern,Pemba,PEMBA,DOBO,Pemba,-16.756,27.403
+Southern,Pemba,PEMBA,HAMAUNDU,Pemba,-16.756,27.403
+Southern,Pemba,PEMBA,KASIYA,Pemba,-16.756,27.403
+Southern,Pemba,PEMBA,MAAMBO,Pemba,-16.756,27.403
+Southern,Pemba,PEMBA,MUZOKA,Pemba,-16.756,27.403
+Southern,Pemba,PEMBA,YOTAM MULEYA,Pemba,-16.756,27.403
+Southern,Siavonga,SIAVONGA,MANCHAMVWA LAKE SHORE,Siavonga,-16.408,28.478
+Southern,Siavonga,SIAVONGA,NAMUZUNGA,Siavonga,-16.408,28.478
+Southern,Siavonga,SIAVONGA,NANYANGA,Siavonga,-16.408,28.478
+Southern,Sinazongwe,SINAZONGWE,MAAMBA,Sinazongwe,-17.457,27.282
+Southern,Sinazongwe,SINAZONGWE,MALIMA,Sinazongwe,-17.457,27.282
+Southern,Sinazongwe,SINAZONGWE,MWEEMBA,Sinazongwe,-17.457,27.282
+Southern,Sinazongwe,SINAZONGWE,MWEEZYA,Sinazongwe,-17.457,27.282
+Southern,Sinazongwe,SINAZONGWE,NANGOMBE,Sinazongwe,-17.457,27.282
+Southern,Sinazongwe,SINAZONGWE,SINAZONGWE,Sinazongwe,-17.457,27.282
+Southern,Sinazongwe,SINAZONGWE,TEKELO,Sinazongwe,-17.457,27.282
+Southern,Zimba,ZIMBA,CHIDI,Zimba,-17.667,26.619
+Southern,Zimba,ZIMBA,KANYANGA,Zimba,-17.667,26.619
+Southern,Zimba,ZIMBA,MANGONDA,Zimba,-17.667,26.619
+Southern,Zimba,ZIMBA,SIMWATACHELA,Zimba,-17.667,26.619
+Southern,Zimba,ZIMBA,ZIMBA,Zimba,-17.667,26.619
+Western,Kalabo,KALABO,CHILELE,Kalabo,-14.856,22.786
+Western,Kalabo,KALABO,LIBONDA,Kalabo,-14.856,22.786
+Western,Kalabo,KALABO,LUANGINGA,Kalabo,-14.856,22.786
+Western,Kalabo,KALABO,NG'UMA,Kalabo,-14.856,22.786
+Western,Kalabo,KALABO,SISHEKANU,Kalabo,-14.856,22.786
+Western,Kaoma,KAOMA,KALUMWANGE,Kaoma,-14.518,24.621
+Western,Kaoma,KAOMA,LONGE,Kaoma,-14.518,24.621
+Western,Kaoma,KAOMA,MUSHWALA,Kaoma,-14.518,24.621
+Western,Kaoma,KAOMA,NALIELE,Kaoma,-14.518,24.621
+Western,Kaoma,KAOMA,WINDA,Kaoma,-14.518,24.621
+Western,Limulunga,LIMULINGA,IKWICHI,Limulunga,-14.96,23.389
+Western,Limulunga,LIMULINGA,LIMULUNGA WEST,Limulunga,-14.96,23.389
+Western,Limulunga,LIMULINGA,NAMBOMA,Limulunga,-14.96,23.389
+Western,Luampa,LUAMPA,KAHUMBU,Luampa,-15.433,24.846
+Western,Luampa,LUAMPA,LUAMPA,Luampa,-15.433,24.846
+Western,Luampa,LUAMPA,MULWA,Luampa,-15.433,24.846
+Western,Luampa,LUAMPA,MWANAWASA,Luampa,-15.433,24.846
+Western,Luampa,LUAMPA,NKENGA,Luampa,-15.433,24.846
+Western,Lukulu,LUKULU,KANG'OTI,Lukulu,-14.375,23.847
+Western,Lukulu,LUKULU,LUANCHUMA,Lukulu,-14.375,23.847
+Western,Lukulu,LUKULU,MWANDI,Lukulu,-14.375,23.847
+Western,Lukulu,LUKULU,MWITO,Lukulu,-14.375,23.847
+Western,Mitete,MITETE,LUNGWEVUNGU,Mitete,-14.284,22.938
+Western,Mitete,MITETE,MITETE,Mitete,-14.284,22.938
+Western,Mitete,MITETE,NYAALA,Mitete,-14.284,22.938
+Western,Mongu,MONGU,ILUTE,Mongu,-15.443,23.718
+Western,Mongu,MONGU,IMWIKO,Mongu,-15.443,23.718
+Western,Mongu,MONGU,KATONGO,Mongu,-15.443,23.718
+Western,Mongu,MONGU,LEALUI LOWER,Mongu,-15.443,23.718
+Western,Mongu,MONGU,LEALUI UPPER,Mongu,-15.443,23.718
+Western,Mongu,MONGU,LOOMA,Mongu,-15.443,23.718
+Western,Mongu,MONGU,LUMBO,Mongu,-15.443,23.718
+Western,Mongu,MONGU,NAKANYAA,Mongu,-15.443,23.718
+Western,Mongu,MONGU,NAMUSHAKENDE,Mongu,-15.443,23.718
+Western,Mulobezi,MULOBEZI,MULOBEZI,Mulobezi,-16.28,24.727
+Western,Mulobezi,MULOBEZI,SALUMBWE,Mulobezi,-16.28,24.727
+Western,Mulobezi,MULOBEZI,SICHILI,Mulobezi,-16.28,24.727
+Western,Mwandi,MWANDI,LOANJA,Mwandi,-17.112,24.684
+Western,Mwandi,MWANDI,SIMUNGOMA,Mwandi,-17.112,24.684
+Western,Nalolo,NALOLO,KATABA,Nalolo,-15.831,22.879
+Western,Nalolo,NALOLO,LYAMAKUMBA,Nalolo,-15.831,22.879
+Western,Nalolo,NALOLO,MUKUKUTU,Nalolo,-15.831,22.879
+Western,Nalolo,NALOLO,NANJUCHA,Nalolo,-15.831,22.879
+Western,Nalolo,NALOLO,SHEKELA,Nalolo,-15.831,22.879
+Western,Nkeyema,NKEYEMA,BULOTO,Nkeyema,-14.861,25.162
+Western,Nkeyema,NKEYEMA,LOMBELOMBE,Nkeyema,-14.861,25.162
+Western,Nkeyema,NKEYEMA,MUNKUYE,Nkeyema,-14.861,25.162
+Western,Nkeyema,NKEYEMA,SHISHAMBA,Nkeyema,-14.861,25.162
+Western,Senanga,SENANGA,IMATONGO,Senanga,-16.023,23.693
+Western,Senanga,SENANGA,LIANGATI,Senanga,-16.023,23.693
+Western,Senanga,SENANGA,LUMBE,Senanga,-16.023,23.693
+Western,Senanga,SENANGA,MATAA,Senanga,-16.023,23.693
+Western,Senanga,SENANGA,NAMUKOKOBA,Senanga,-16.023,23.693
+Western,Sesheke,SESHEKE,MULIMAMBANGO,Sesheke,-16.931,23.864
+Western,Sesheke,SESHEKE,NAKATINDI,Sesheke,-16.931,23.864
+Western,Shang'ombo,SHANG'OMBO,MAMBOLOMOKA,Shang'Ombo,-16.0,23.5
+Western,Shang'ombo,SHANG'OMBO,MULANGU,Shang'Ombo,-16.0,23.5
+Western,Shang'ombo,SHANG'OMBO,MULONGA,Shang'Ombo,-16.0,23.5
+Western,Shang'ombo,SHANG'OMBO,NALITENGEYA,Shang'Ombo,-16.0,23.5
+Western,Shang'ombo,SHANG'OMBO,SIMU,Shang'Ombo,-16.0,23.5
+Western,Shang'ombo,SHANG'OMBO,STATE RANCH,Shang'Ombo,-16.0,23.5
+Western,Sikongo,SIKONGO,LICHA,Sikongo,-15.323,22.247
+Western,Sikongo,SIKONGO,LWAMBI,Sikongo,-15.323,22.247
+Western,Sikongo,SIKONGO,NATALUI,Sikongo,-15.323,22.247
+Western,Sioma,SIOMA,LIWANDAMO,Sioma,-16.757,23.145
+Western,Sioma,SIOMA,MBETA,Sioma,-16.757,23.145
+Western,Sioma,SIOMA,MBUME,Sioma,-16.757,23.145
+Western,Sioma,SIOMA,NANGWESHI,Sioma,-16.757,23.145
+Western,Sioma,SIOMA,SIKABENGA,Sioma,-16.757,23.145
