@@ -1169,3 +1169,43 @@ if "prediction" in st.session_state:
         file_name="agrisense_farm_assessment.csv",
         mime="text/csv"
     )
+    
+    
+    
+    
+    
+    st.markdown("---")
+
+st.markdown(
+    """
+    ## 🌾 About AgriSense AI
+
+    AgriSense AI is an agricultural decision-support
+    system designed for Zambia.
+
+    The system combines agricultural survey data,
+    rainfall information, soil characteristics,
+    satellite-derived vegetation indicators and
+    machine learning to estimate crop yield and
+    identify environmental risk factors.
+
+    ### Farmer-facing inputs
+
+    The farmer only needs:
+
+    - Crop
+    - Farm size
+    - District
+    - Planting date
+
+    The system handles the environmental feature
+    engineering behind the scenes.
+
+    ### Important
+
+    AgriSense provides decision-support information,
+    not a guarantee of future agricultural production.
+    Actual yields depend on weather, management,
+    pests, disease, seed quality and other factors.
+    """
+)
